@@ -39,67 +39,79 @@
   --font-mono: var(--font-dm-mono);
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/*
+  Tailwind v4 puts its utility classes inside `@layer utilities`. Any CSS
+  written outside a layer is "unlayered" and beats ALL layered CSS in the
+  cascade regardless of specificity — so plain element-selector rules here
+  would silently win over utility classes like `mx-auto` or `text-white`
+  applied to the same element. Wrapping our base styles in `@layer base`
+  keeps them properly overridable by utility classes, as intended.
+*/
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), var(--font-sans), sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin: 0 0 0.4em;
+  }
+  h1 { font-size: clamp(2.8rem, 7vw, 5.6rem); line-height: 0.98; letter-spacing: -0.01em; font-weight: 900; }
+  h2 { font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.02; font-weight: 900; }
+  h3 { font-size: 1.3rem; letter-spacing: 0; }
+  p { color: var(--muted); margin: 0 0 1em; }
 }
 
-.font-display { font-family: var(--font-display), var(--font-sans), sans-serif; }
-.font-mono { font-family: var(--font-mono), monospace; }
+@layer components {
+  .font-display { font-family: var(--font-display), var(--font-sans), sans-serif; }
+  .font-mono { font-family: var(--font-mono), monospace; }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-display), var(--font-sans), sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  color: var(--text);
-  margin: 0 0 0.4em;
-}
-h1 { font-size: clamp(2.8rem, 7vw, 5.6rem); line-height: 0.98; letter-spacing: -0.01em; font-weight: 900; }
-h2 { font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.02; font-weight: 900; }
-h3 { font-size: 1.3rem; letter-spacing: 0; }
-p { color: var(--muted); margin: 0 0 1em; }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono), monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1em;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 22px;
+    height: 1px;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent-glow);
+  }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-mono), monospace;
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1em;
-}
-.eyebrow::before {
-  content: "";
-  width: 22px;
-  height: 1px;
-  background: var(--accent);
-  box-shadow: 0 0 8px var(--accent-glow);
-}
+  .glow {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(90px);
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    opacity: 0.6;
+    z-index: 0;
+  }
 
-.glow {
-  position: absolute;
-  pointer-events: none;
-  border-radius: 50%;
-  filter: blur(90px);
-  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-  opacity: 0.6;
-  z-index: 0;
-}
-
-.pill-tag {
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 10px 18px;
-  font-family: var(--font-mono), monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--text);
+  .pill-tag {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-family: var(--font-mono), monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text);
+  }
 }

@@ -48,9 +48,9 @@ export default function Home() {
       <section className="relative flex min-h-[92vh] flex-col items-center justify-center overflow-hidden px-6 py-32">
         <HeroVideo />
         <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
-          <span className="eyebrow justify-center">Where Sound Meets Engineering</span>
-          <SplitHeadline className="mx-auto max-w-4xl">We Build Extraordinary Live Experiences.</SplitHeadline>
-          <p className="mx-auto mb-8 max-w-xl text-lg">
+          <span className="eyebrow justify-center [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">Where Sound Meets Engineering</span>
+          <SplitHeadline className="mx-auto max-w-4xl [text-shadow:0_4px_30px_rgba(0,0,0,0.85)]">We Build Extraordinary Live Experiences.</SplitHeadline>
+          <p className="mx-auto mb-8 max-w-xl text-lg text-text/90 [text-shadow:0_2px_16px_rgba(0,0,0,0.9)]">
             Precision-run stage, sound, lighting and AV production — built to hold up under
             pressure, from corporate galas and conferences to concerts and broadcast activations
             across South Africa.

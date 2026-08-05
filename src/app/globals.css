@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --accent: #2E9E8B;
+  --bg: #070708;
+  --surface: #101013;
+  --text: #F5F5F3;
+  --muted: #8C8C90;
+
+  --surface-glass: rgba(16, 16, 19, 0.6);
+  --border: rgba(245, 245, 243, 0.08);
+  --accent-glow: rgba(46, 158, 139, 0.35);
+  --accent-glow-soft: rgba(46, 158, 139, 0.14);
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  --accent: #1C7263;
+  --bg: #F7F7F5;
+  --surface: #FFFFFF;
+  --text: #101012;
+  --muted: #55555B;
+
+  --surface-glass: rgba(255, 255, 255, 0.72);
+  --border: rgba(16, 16, 18, 0.08);
+  --accent-glow: rgba(28, 114, 99, 0.22);
+  --accent-glow-soft: rgba(28, 114, 99, 0.08);
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-accent: var(--accent);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-inter);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+.font-display { font-family: var(--font-display), var(--font-sans), sans-serif; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0 0 0.5em;
+}
+h1 { font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1.05; letter-spacing: -0.03em; }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); line-height: 1.15; }
+h3 { font-size: 1.3rem; }
+p { color: var(--muted); margin: 0 0 1em; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.glow {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(90px);
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  opacity: 0.6;
+  z-index: 0;
+}

@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Alumni_Sans, Manrope, DM_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
-const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const alumniSans = Alumni_Sans({
+  variable: "--font-alumni-sans",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["600", "700", "800", "900"],
+});
+const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"] });
+const dmMono = DM_Mono({
+  variable: "--font-dm-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -23,7 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
+      className={`${alumniSans.variable} ${manrope.variable} ${dmMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg text-text">
         <SmoothScrollProvider>

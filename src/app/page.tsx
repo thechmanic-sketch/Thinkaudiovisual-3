@@ -5,6 +5,7 @@ import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
 import Accordion from "@/components/Accordion";
 import SplitHeadline from "@/components/SplitHeadline";
+import Parallax from "@/components/Parallax";
 import { asset } from "@/lib/asset";
 
 const disciplines = [
@@ -69,13 +70,15 @@ export default function Home() {
       <section className="section-light px-6 py-24">
         <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-2 md:items-center">
           <Reveal className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--border)]">
-            <Image
-              src={asset("/media/gallery/event-onsite-1.jpg")}
-              alt="Think Audio Visual crew running an event on site"
-              fill
-              className="object-cover"
-              sizes="(min-width: 768px) 45vw, 90vw"
-            />
+            <Parallax fill strength={16}>
+              <Image
+                src={asset("/media/gallery/event-onsite-1.jpg")}
+                alt="Think Audio Visual crew running an event on site"
+                fill
+                className="object-cover"
+                sizes="(min-width: 768px) 45vw, 90vw"
+              />
+            </Parallax>
           </Reveal>
           <Reveal>
             <span className="eyebrow">Four Disciplines, One Crew</span>
@@ -108,13 +111,15 @@ export default function Home() {
 
       {/* Second full-bleed hero with 3-col strip */}
       <section className="relative overflow-hidden px-6 py-32">
-        <Image
-          src={asset("/media/gallery/concert-crowd.jpg")}
-          alt="Think Audio Visual live event"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
+        <Parallax fill strength={14}>
+          <Image
+            src={asset("/media/gallery/concert-crowd.jpg")}
+            alt="Think Audio Visual live event"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+        </Parallax>
         <div className="absolute inset-0 bg-bg/80" />
         <Reveal className="relative z-10 mx-auto max-w-3xl text-center">
           <h2>Think Audio Visual Is Your Technical Partner For Live Production.</h2>

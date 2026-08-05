@@ -7,13 +7,34 @@ import Accordion from "@/components/Accordion";
 import SplitHeadline from "@/components/SplitHeadline";
 import Parallax from "@/components/Parallax";
 import ServiceScroller from "@/components/ServiceScroller";
+import DisciplinesCarousel from "@/components/DisciplinesCarousel";
 import { asset } from "@/lib/asset";
 
 const disciplines = [
-  { idx: "01", title: "Sound", copy: "PA systems, live performance audio, backline, DJ'ing and conference microphones tuned to the room." },
-  { idx: "02", title: "Lighting", copy: "Stage lighting, uplighting and décor lighting, designed to set the tone of your event from entrance to exit." },
-  { idx: "03", title: "Stage & Rigging", copy: "Performance stages, trussing and podium builds engineered for safety and built to spec." },
-  { idx: "04", title: "Audio Visual", copy: "LED screens, projection and live streaming for conferences, meetings and brand activations." },
+  {
+    idx: "01",
+    title: "Sound",
+    copy: "PA systems, live performance audio, backline, DJ'ing and conference microphones tuned to the room.",
+    lines: ["Audio recording", "Conference microphones"],
+  },
+  {
+    idx: "02",
+    title: "Lighting",
+    copy: "Stage lighting, uplighting and décor lighting, designed to set the tone of your event from entrance to exit.",
+    lines: ["Up lights & décor lights", "Disco lights"],
+  },
+  {
+    idx: "03",
+    title: "Stage & Rigging",
+    copy: "Performance stages, trussing and podium builds engineered for safety and built to spec.",
+    lines: ["Trussing & rigging", "Podium raising"],
+  },
+  {
+    idx: "04",
+    title: "Audio Visual",
+    copy: "LED screens, projection and live streaming for conferences, meetings and brand activations.",
+    lines: ["Data projectors & laptops", "Video recording & live streaming"],
+  },
 ];
 
 const pillTags = [
@@ -100,17 +121,9 @@ export default function Home() {
             </Link>
           </Reveal>
         </div>
-
-        <div className="mx-auto mt-20 grid max-w-6xl gap-6 border-t border-[var(--border)] pt-14 sm:grid-cols-2 lg:grid-cols-4">
-          {disciplines.map((d, i) => (
-            <Reveal key={d.title} delay={i * 0.06}>
-              <span className="mb-4 block font-mono text-xs uppercase tracking-wide text-accent">{d.idx}</span>
-              <h3>{d.title}</h3>
-              <p>{d.copy}</p>
-            </Reveal>
-          ))}
-        </div>
       </section>
+
+      <DisciplinesCarousel items={disciplines} />
 
       {/* Second full-bleed hero with 3-col strip */}
       <section className="relative overflow-hidden px-6 py-32">

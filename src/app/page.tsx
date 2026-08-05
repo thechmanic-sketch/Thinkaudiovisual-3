@@ -4,6 +4,7 @@ import HeroVideo from "@/components/HeroVideo";
 import Reveal from "@/components/Reveal";
 import Card from "@/components/Card";
 import CtaBand from "@/components/CtaBand";
+import { asset } from "@/lib/asset";
 
 const disciplines = [
   { idx: "01 — Sound", title: "Professional Sound Systems", copy: "PA systems, live performance audio, backline, DJ'ing and conference microphones tuned to the room." },
@@ -95,7 +96,7 @@ export default function Home() {
           </Reveal>
           <Reveal className="relative aspect-square overflow-hidden rounded-2xl border border-[var(--border)]">
             <Image
-              src="/media/gallery/event-onsite-1.jpg"
+              src={asset("/media/gallery/event-onsite-1.jpg")}
               alt="Think Audio Visual crew running an event on site"
               fill
               className="object-cover"
@@ -120,7 +121,7 @@ export default function Home() {
           <div className="grid gap-5 md:grid-cols-3">
             {recentWork.map((m, i) => (
               <Reveal key={m.title} delay={i * 0.08} className="relative flex aspect-[4/3] items-end overflow-hidden rounded-2xl border border-[var(--border)] transition-transform hover:scale-[1.02]">
-                <Image src={m.img} alt={m.title} fill className="object-cover" sizes="(min-width: 768px) 33vw, 90vw" />
+                <Image src={asset(m.img)} alt={m.title} fill className="object-cover" sizes="(min-width: 768px) 33vw, 90vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-bg/90 via-bg/10 to-transparent" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,var(--accent-glow-soft),transparent_60%)]" />
                 <div className="relative z-10 p-5">

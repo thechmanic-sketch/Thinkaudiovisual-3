@@ -1,4 +1,4 @@
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+import { asset } from "@/lib/asset";
 
 export default function HeroVideo() {
   return (
@@ -11,7 +11,7 @@ export default function HeroVideo() {
         playsInline
         preload="metadata"
       >
-        <source src={`${basePath}/media/video/hero.mp4`} type="video/mp4" />
+        <source src={asset("/media/video/hero.mp4")} type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-gradient-to-b from-bg/40 via-bg/70 to-bg" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,var(--accent-glow-soft),transparent_60%)]" />

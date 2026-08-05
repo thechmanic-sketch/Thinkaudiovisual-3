@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="mb-10 grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <div className="mb-3.5 flex items-center gap-2.5 font-display font-bold">
-              <Image src="/media/brand/logo.png" alt="Think Audio Visual" width={28} height={28} className="h-7 w-7 rounded-full object-contain" />
+              <Image src={asset("/media/brand/logo.png")} alt="Think Audio Visual" width={28} height={28} className="h-7 w-7 rounded-full object-contain" />
               <span>THINK AUDIO VISUAL</span>
             </div>
             <p className="text-sm text-muted">

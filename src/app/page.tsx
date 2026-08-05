@@ -1,5 +1,6 @@
 import Link from "next/link";
-import HeroScene from "@/components/HeroScene";
+import Image from "next/image";
+import HeroVideo from "@/components/HeroVideo";
 import Reveal from "@/components/Reveal";
 import Card from "@/components/Card";
 import CtaBand from "@/components/CtaBand";
@@ -12,16 +13,16 @@ const disciplines = [
 ];
 
 const recentWork = [
-  { cat: "Corporate", title: "Ballroom Conference Setup" },
-  { cat: "Live Event", title: "Concert Lighting Rig" },
-  { cat: "Broadcast", title: "SABC Screen Activation" },
+  { cat: "Corporate", title: "Ballroom Conference Setup", img: "/media/gallery/gallery-01.jpg" },
+  { cat: "Live Event", title: "Concert Lighting Rig", img: "/media/gallery/concert-stage.avif" },
+  { cat: "Broadcast", title: "SABC Screen Activation", img: "/media/gallery/gallery-08.jpg" },
 ];
 
 export default function Home() {
   return (
     <>
       <section className="relative overflow-hidden px-6 pb-20 pt-36">
-        <HeroScene />
+        <HeroVideo />
         <div className="glow left-1/2 top-[-220px] h-[620px] w-[620px] -translate-x-1/2" />
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="max-w-2xl">
@@ -92,7 +93,15 @@ export default function Home() {
               <cite className="mt-2.5 block text-sm not-italic text-accent">— T. Masango, Owner &amp; Director</cite>
             </blockquote>
           </Reveal>
-          <Reveal className="relative aspect-square overflow-hidden rounded-2xl border border-[var(--border)] bg-gradient-to-br from-surface to-bg">
+          <Reveal className="relative aspect-square overflow-hidden rounded-2xl border border-[var(--border)]">
+            <Image
+              src="/media/gallery/event-onsite-1.jpg"
+              alt="Think Audio Visual crew running an event on site"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 40vw, 90vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-bg/85 via-bg/10 to-transparent" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,var(--accent-glow-soft),transparent_60%)]" />
             <div className="absolute bottom-6 left-6">
               <span className="mb-1 block text-xs uppercase tracking-wider text-accent">On Site</span>
@@ -110,7 +119,9 @@ export default function Home() {
           </Reveal>
           <div className="grid gap-5 md:grid-cols-3">
             {recentWork.map((m, i) => (
-              <Reveal key={m.title} delay={i * 0.08} className="relative flex aspect-[4/3] items-end overflow-hidden rounded-2xl border border-[var(--border)] bg-gradient-to-br from-surface to-bg transition-transform hover:scale-[1.02]">
+              <Reveal key={m.title} delay={i * 0.08} className="relative flex aspect-[4/3] items-end overflow-hidden rounded-2xl border border-[var(--border)] transition-transform hover:scale-[1.02]">
+                <Image src={m.img} alt={m.title} fill className="object-cover" sizes="(min-width: 768px) 33vw, 90vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-bg/90 via-bg/10 to-transparent" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,var(--accent-glow-soft),transparent_60%)]" />
                 <div className="relative z-10 p-5">
                   <span className="mb-1 block text-xs uppercase tracking-wider text-accent">{m.cat}</span>

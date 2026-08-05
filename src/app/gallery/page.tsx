@@ -9,16 +9,16 @@ export const metadata: Metadata = {
 };
 
 const items = [
-  { cat: "Corporate Gala", title: "Stage & Podium Styling" },
-  { cat: "Live Event", title: "Club Lighting Rig" },
-  { cat: "Live Event", title: "DJ Set-Up" },
-  { cat: "Brand Activation", title: "Nedbank Screen Activation" },
-  { cat: "Community Event", title: "Hall PA & Stage Setup" },
-  { cat: "Corporate", title: "Presentation & Podium" },
-  { cat: "Live Performance", title: "Theatre Stage Show" },
-  { cat: "Outdoor Event", title: "Marquee Tent Setup" },
-  { cat: "Festival", title: "Outdoor Concert Stage" },
-  { cat: "Corporate", title: "Boardroom Conferencing" },
+  { cat: "Corporate Gala", title: "Stage & Podium Styling", img: "/media/gallery/gallery-08.jpg" },
+  { cat: "Live Event", title: "Club Lighting Rig", img: "/media/gallery/gallery-09.jpg" },
+  { cat: "Live Event", title: "DJ Set-Up", img: "/media/gallery/dj-setup.jpg" },
+  { cat: "Brand Activation", title: "Nedbank Screen Activation", img: "/media/gallery/gallery-10.jpg" },
+  { cat: "Community Event", title: "Hall PA & Stage Setup", img: "/media/gallery/pa-system.webp" },
+  { cat: "Corporate", title: "Presentation & Podium", img: "/media/gallery/gallery-11.jpg" },
+  { cat: "Live Performance", title: "Theatre Stage Show", img: "/media/gallery/stage-monitor.webp" },
+  { cat: "Outdoor Event", title: "Marquee Tent Setup", img: "/media/gallery/gallery-12.jpg" },
+  { cat: "Festival", title: "Outdoor Concert Stage", img: "/media/gallery/concert-stage.avif" },
+  { cat: "Corporate", title: "Boardroom Conferencing", img: "/media/gallery/gallery-13.jpg" },
 ];
 
 export default function Gallery() {

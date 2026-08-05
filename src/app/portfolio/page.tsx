@@ -10,18 +10,18 @@ export const metadata: Metadata = {
 };
 
 const items = [
-  { cat: "Corporate", title: "Ballroom Conference Setup" },
-  { cat: "Corporate Gala", title: "Awards Evening Staging" },
-  { cat: "Live Event", title: "Concert Lighting Rig" },
-  { cat: "Live Event", title: "DJ Set-Up" },
-  { cat: "Outdoor Event", title: "Marquee Tent Setup" },
-  { cat: "Corporate", title: "Presentation & Podium" },
-  { cat: "Brand Activation", title: "Nedbank Screen Activation" },
-  { cat: "Community Event", title: "Hall PA & Stage Setup" },
-  { cat: "Broadcast", title: "SABC Screen Activation" },
-  { cat: "Corporate Gala", title: "Stage & Podium Styling" },
-  { cat: "Live Performance", title: "Theatre Stage Show" },
-  { cat: "Festival", title: "Outdoor Concert Stage" },
+  { cat: "Corporate", title: "Ballroom Conference Setup", img: "/media/gallery/gallery-01.jpg" },
+  { cat: "Corporate Gala", title: "Awards Evening Staging", img: "/media/gallery/gallery-02.jpg" },
+  { cat: "Live Event", title: "Concert Lighting Rig", img: "/media/gallery/concert-stage.avif" },
+  { cat: "Live Event", title: "DJ Set-Up", img: "/media/gallery/dj-setup.jpg" },
+  { cat: "Outdoor Event", title: "Marquee Tent Setup", img: "/media/gallery/gallery-03.jpg" },
+  { cat: "Corporate", title: "Presentation & Podium", img: "/media/gallery/gallery-04.jpg" },
+  { cat: "Brand Activation", title: "Nedbank Screen Activation", img: "/media/gallery/gallery-05.jpg" },
+  { cat: "Community Event", title: "Hall PA & Stage Setup", img: "/media/gallery/sound-tile.jpg" },
+  { cat: "Broadcast", title: "SABC Screen Activation", img: "/media/gallery/gallery-06.jpg" },
+  { cat: "Corporate Gala", title: "Stage & Podium Styling", img: "/media/gallery/gallery-07.jpg" },
+  { cat: "Live Performance", title: "Theatre Stage Show", img: "/media/gallery/stage-monitor.webp" },
+  { cat: "Festival", title: "Outdoor Concert Stage", img: "/media/gallery/concert-crowd.jpg" },
 ];
 
 export default function Portfolio() {

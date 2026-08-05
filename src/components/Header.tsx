@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -22,7 +23,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--surface-glass)] backdrop-blur-xl">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2.5 font-display font-bold">
-          <span className="h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_12px_var(--accent-glow)]" />
+          <Image src="/media/brand/logo.png" alt="Think Audio Visual" width={32} height={32} className="h-8 w-8 rounded-full object-contain" />
           <span className="leading-tight">
             THINK AUDIO VISUAL
             <small className="block text-[0.65rem] font-medium tracking-widest text-muted uppercase">

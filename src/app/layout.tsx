@@ -5,6 +5,7 @@ import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import Preloader from "@/components/Preloader";
 
 const alumniSans = Alumni_Sans({
   variable: "--font-alumni-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${alumniSans.variable} ${manrope.variable} ${dmMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg text-text">
+        <Preloader />
         <SmoothScrollProvider>
           <Header />
           <main className="flex-1">{children}</main>

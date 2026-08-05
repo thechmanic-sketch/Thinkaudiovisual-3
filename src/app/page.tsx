@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex min-h-[92vh] flex-col justify-end overflow-hidden px-6 pb-16 pt-36">
+      <section className="relative flex min-h-[92vh] flex-col items-center justify-center overflow-hidden px-6 py-32">
         <HeroVideo />
         <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
           <span className="eyebrow justify-center">Where Sound Meets Engineering</span>

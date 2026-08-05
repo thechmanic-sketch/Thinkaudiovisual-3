@@ -16,7 +16,7 @@ export default function Header() {
           <button
             onClick={() => setOpen(true)}
             aria-label="Open menu"
-            className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wide text-text"
+            className="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wide text-text"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
               <path d="M3 6h18M3 12h18M3 18h18" />
@@ -36,7 +36,7 @@ export default function Header() {
 
           <Link
             href="/contact"
-            className="rounded-full bg-accent px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-[#06110E] transition-transform hover:-translate-y-0.5"
+            className="rounded-full bg-accent px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-[#06110E] transition-transform hover:-translate-y-0.5"
           >
             Get a Quote
           </Link>

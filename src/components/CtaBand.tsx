@@ -19,7 +19,7 @@ export default function CtaBand({
         <div className="mt-7 flex flex-wrap justify-center gap-3.5">
           <Link
             href="/contact"
-            className="rounded-full bg-accent px-7 py-3.5 text-xs font-semibold uppercase tracking-wide text-[#06110E] transition-transform hover:-translate-y-0.5"
+            className="rounded-full bg-accent px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-[#06110E] transition-transform hover:-translate-y-0.5"
           >
             {primaryLabel}
           </Link>
@@ -27,7 +27,7 @@ export default function CtaBand({
             href="https://wa.me/27834180085"
             target="_blank"
             rel="noopener"
-            className="rounded-full border border-[var(--border)] px-7 py-3.5 text-xs font-semibold uppercase tracking-wide transition-colors hover:border-accent hover:text-accent"
+            className="rounded-full border border-[var(--border)] px-7 py-3.5 text-xs font-bold uppercase tracking-wide transition-colors hover:border-accent hover:text-accent"
           >
             WhatsApp Us
           </a>

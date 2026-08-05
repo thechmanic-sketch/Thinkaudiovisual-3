@@ -56,10 +56,10 @@ export default function Home() {
             across South Africa.
           </p>
           <div className="flex flex-wrap gap-3.5">
-            <Link href="/contact" className="rounded-full bg-accent px-7 py-3.5 text-xs font-semibold uppercase tracking-wide text-[#06110E] transition-transform hover:-translate-y-0.5">
+            <Link href="/contact" className="rounded-full bg-accent px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-[#06110E] transition-transform hover:-translate-y-0.5">
               Get a Quote
             </Link>
-            <Link href="/portfolio" className="rounded-full border border-[var(--border)] px-7 py-3.5 text-xs font-semibold uppercase tracking-wide transition-colors hover:border-accent hover:text-accent">
+            <Link href="/portfolio" className="rounded-full border border-[var(--border)] px-7 py-3.5 text-xs font-bold uppercase tracking-wide transition-colors hover:border-accent hover:text-accent">
               View Our Work
             </Link>
           </div>
@@ -92,7 +92,7 @@ export default function Home() {
                 <span key={tag} className="pill-tag">{tag}</span>
               ))}
             </div>
-            <Link href="/services" className="rounded-full bg-accent px-7 py-3.5 text-xs font-semibold uppercase tracking-wide text-white">
+            <Link href="/services" className="rounded-full bg-accent px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-white">
               See Our Services
             </Link>
           </Reveal>
@@ -127,7 +127,7 @@ export default function Home() {
             Every event is treated as a technical operation, not a favour — with the focus on
             reliability, the right equipment, and results delivered on your timeline.
           </p>
-          <Link href="/contact" className="inline-block rounded-full bg-accent px-7 py-3.5 text-xs font-semibold uppercase tracking-wide text-[#06110E]">
+          <Link href="/contact" className="inline-block rounded-full bg-accent px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-[#06110E]">
             Get a Quote
           </Link>
         </Reveal>
@@ -151,7 +151,7 @@ export default function Home() {
               Cryox-grade precision, applied to stage and sound. Every setup is still built
               around your specific brief.
             </p>
-            <Link href="/services" className="mt-6 inline-block rounded-full bg-accent px-7 py-3.5 text-xs font-semibold uppercase tracking-wide text-white">
+            <Link href="/services" className="mt-6 inline-block rounded-full bg-accent px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-white">
               Applications By Event
             </Link>
           </Reveal>
@@ -175,13 +175,13 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-bg/90 via-bg/10 to-transparent" />
                 <div className="relative z-10 p-5">
                   <span className="mb-1 block font-mono text-xs uppercase tracking-wide text-accent">{m.cat}</span>
-                  <span className="font-semibold">{m.title}</span>
+                  <span className="font-bold">{m.title}</span>
                 </div>
               </Reveal>
             ))}
           </div>
           <div className="mt-11 text-center">
-            <Link href="/portfolio" className="rounded-full border border-[var(--border)] px-7 py-3.5 text-xs font-semibold uppercase tracking-wide transition-colors hover:border-accent hover:text-accent">
+            <Link href="/portfolio" className="rounded-full border border-[var(--border)] px-7 py-3.5 text-xs font-bold uppercase tracking-wide transition-colors hover:border-accent hover:text-accent">
               View Full Portfolio
             </Link>
           </div>

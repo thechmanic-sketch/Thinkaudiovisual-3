@@ -18,7 +18,7 @@ export default function MediaGrid({ items }: { items: { cat: string; title: stri
           <div className="absolute inset-0 bg-gradient-to-t from-bg/90 via-bg/15 to-transparent" />
           <div className="relative z-10 p-5">
             <span className="mb-1 block font-mono text-xs uppercase tracking-wide text-accent">{m.cat}</span>
-            <span className="font-semibold">{m.title}</span>
+            <span className="font-bold">{m.title}</span>
           </div>
         </Reveal>
       ))}

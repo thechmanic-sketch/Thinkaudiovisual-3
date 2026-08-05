@@ -75,7 +75,7 @@ export default function NavOverlay({
         <Link
           href="/contact"
           onClick={onClose}
-          className="hidden rounded-full bg-accent px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-[#06110E] sm:inline-flex"
+          className="hidden rounded-full bg-accent px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-[#06110E] sm:inline-flex"
         >
           Get a Quote
         </Link>

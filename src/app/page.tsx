@@ -6,6 +6,7 @@ import CtaBand from "@/components/CtaBand";
 import Accordion from "@/components/Accordion";
 import SplitHeadline from "@/components/SplitHeadline";
 import Parallax from "@/components/Parallax";
+import ServiceScroller from "@/components/ServiceScroller";
 import { asset } from "@/lib/asset";
 
 const disciplines = [
@@ -65,6 +66,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ServiceScroller />
 
       {/* Method-style section: image + pill tags + CTA — light beat */}
       <section className="section-light px-6 py-24">

@@ -41,7 +41,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section className="px-6 pb-24">
+      <section className="section-light px-6 py-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="eyebrow justify-center">Trusted to run the room</span>
           <blockquote className="font-display text-xl italic text-text">

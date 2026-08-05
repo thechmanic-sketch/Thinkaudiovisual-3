@@ -72,7 +72,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="px-6 pb-24">
+      <section className="section-light px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <Reveal className="mx-auto mb-14 max-w-xl text-center">
             <span className="eyebrow justify-center">Matched To Your Event</span>
@@ -81,7 +81,7 @@ export default function Services() {
           </Reveal>
           <div className="grid gap-6 md:grid-cols-3">
             {matched.map((m, i) => (
-              <Reveal key={m.title} delay={i * 0.08} className="rounded-2xl border border-[var(--border)] bg-surface p-8">
+              <Reveal key={m.title} delay={i * 0.08} className="rounded-md border border-[var(--border)] bg-surface p-8">
                 <h3>{m.title}</h3>
                 <p>{m.copy}</p>
               </Reveal>

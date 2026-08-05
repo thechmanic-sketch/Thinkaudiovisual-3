@@ -64,8 +64,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Method-style section: image + pill tags + CTA */}
-      <section className="px-6 py-24">
+      {/* Method-style section: image + pill tags + CTA — light beat */}
+      <section className="section-light px-6 py-24">
         <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-2 md:items-center">
           <Reveal className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--border)]">
             <Image
@@ -88,7 +88,7 @@ export default function Home() {
                 <span key={tag} className="pill-tag">{tag}</span>
               ))}
             </div>
-            <Link href="/services" className="rounded-full bg-accent px-7 py-3.5 text-xs font-semibold uppercase tracking-wide text-[#06110E]">
+            <Link href="/services" className="rounded-full bg-accent px-7 py-3.5 text-xs font-semibold uppercase tracking-wide text-white">
               See Our Services
             </Link>
           </Reveal>

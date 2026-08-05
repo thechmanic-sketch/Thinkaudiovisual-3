@@ -59,7 +59,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-6 py-24">
+      <section className="section-light px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <Reveal className="mx-auto mb-14 max-w-xl text-center">
             <span className="eyebrow justify-center">Why Us</span>

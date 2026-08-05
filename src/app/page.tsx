@@ -47,15 +47,15 @@ export default function Home() {
       {/* Hero */}
       <section className="relative flex min-h-[92vh] flex-col justify-end overflow-hidden px-6 pb-16 pt-36">
         <HeroVideo />
-        <div className="relative z-10 mx-auto w-full max-w-6xl">
-          <span className="eyebrow">Where Sound Meets Engineering</span>
-          <SplitHeadline className="max-w-4xl">We Build Extraordinary Live Experiences.</SplitHeadline>
-          <p className="mb-8 max-w-xl text-lg">
+        <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
+          <span className="eyebrow justify-center">Where Sound Meets Engineering</span>
+          <SplitHeadline className="mx-auto max-w-4xl">We Build Extraordinary Live Experiences.</SplitHeadline>
+          <p className="mx-auto mb-8 max-w-xl text-lg">
             Precision-run stage, sound, lighting and AV production — built to hold up under
             pressure, from corporate galas and conferences to concerts and broadcast activations
             across South Africa.
           </p>
-          <div className="flex flex-wrap gap-3.5">
+          <div className="flex flex-wrap justify-center gap-3.5">
             <Link href="/contact" className="rounded-full bg-accent px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-[#06110E] transition-transform hover:-translate-y-0.5">
               Get a Quote
             </Link>

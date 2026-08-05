@@ -4,6 +4,7 @@ import HeroVideo from "@/components/HeroVideo";
 import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
 import Accordion from "@/components/Accordion";
+import SplitHeadline from "@/components/SplitHeadline";
 import { asset } from "@/lib/asset";
 
 const disciplines = [
@@ -47,7 +48,7 @@ export default function Home() {
         <HeroVideo />
         <div className="relative z-10 mx-auto w-full max-w-6xl">
           <span className="eyebrow">Where Sound Meets Engineering</span>
-          <h1 className="max-w-4xl">We Build Extraordinary Live Experiences.</h1>
+          <SplitHeadline className="max-w-4xl">We Build Extraordinary Live Experiences.</SplitHeadline>
           <p className="mb-8 max-w-xl text-lg">
             Precision-run stage, sound, lighting and AV production — built to hold up under
             pressure, from corporate galas and conferences to concerts and broadcast activations

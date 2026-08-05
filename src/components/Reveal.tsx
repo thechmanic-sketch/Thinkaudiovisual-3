@@ -3,8 +3,11 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CustomEase } from "gsap/CustomEase";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, CustomEase);
+
+const REVEAL_EASE = CustomEase.create("revealEase", "M0,0 C0.16,1 0.3,1 1,1");
 
 export default function Reveal({
   children,
@@ -23,16 +26,17 @@ export default function Reveal({
     const ctx = gsap.context(() => {
       gsap.fromTo(
         el,
-        { opacity: 0, y: 28 },
+        { opacity: 0, y: 72, scale: 0.96 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.9,
+          scale: 1,
+          duration: 1.1,
           delay,
-          ease: "power3.out",
+          ease: REVEAL_EASE,
           scrollTrigger: {
             trigger: el,
-            start: "top 85%",
+            start: "top 88%",
           },
         }
       );

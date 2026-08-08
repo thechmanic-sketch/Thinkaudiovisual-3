@@ -6,7 +6,7 @@ export default function HeroVideo() {
     <div className="absolute inset-0 -z-0 overflow-hidden">
       <Parallax className="h-full w-full" strength={12}>
         <video
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain sm:object-cover"
           autoPlay
           muted
           loop

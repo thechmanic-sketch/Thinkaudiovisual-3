@@ -24,8 +24,13 @@ export default function Header() {
             Menu
           </button>
 
-          <Link href="/" className="flex items-center">
-            <Image src={asset("/media/brand/logo.png")} alt="Think Audio Visual" width={56} height={56} className="h-14 w-14 rounded-full object-contain" />
+          <Link href="/" className="relative h-14 aspect-[12/5.5] overflow-hidden">
+            <Image
+              src={asset("/media/brand/logo.png")}
+              alt="Think Audio Visual"
+              fill
+              className="scale-[1.45] object-cover"
+            />
           </Link>
 
           <Link

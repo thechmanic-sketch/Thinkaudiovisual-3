@@ -16,9 +16,13 @@ export default function Footer() {
       <div className="glow -bottom-40 -left-40 h-[420px] w-[420px] opacity-30" />
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="flex flex-col items-center gap-10 text-center">
-          <div className="flex items-center gap-2.5">
-            <Image src={asset("/media/brand/logo.png")} alt="Think Audio Visual" width={28} height={28} className="h-7 w-7 rounded-full object-contain" />
-            <span className="font-display text-sm font-bold uppercase tracking-wide">THINK AUDIO VISUAL</span>
+          <div className="relative h-16 aspect-[12/5.5] overflow-hidden">
+            <Image
+              src={asset("/media/brand/logo.png")}
+              alt="Think Audio Visual"
+              fill
+              className="scale-[1.45] object-cover"
+            />
           </div>
 
           <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 font-display text-3xl font-extrabold uppercase leading-none tracking-tight sm:text-5xl">

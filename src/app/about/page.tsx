@@ -77,7 +77,7 @@ export default function About() {
           <Reveal className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--border)] md:order-2">
             <Parallax fill strength={16}>
               <Image
-                src={asset("/media/gallery/event-onsite-2.jpg")}
+                src={asset("/media/gallery/gallery-11.jpg")}
                 alt="Think Audio Visual crew running an event"
                 fill
                 className="object-cover"

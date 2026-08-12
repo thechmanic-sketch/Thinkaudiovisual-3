@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import NavOverlay from "@/components/NavOverlay";
+import ThemeToggle from "@/components/ThemeToggle";
 import { asset } from "@/lib/asset";
 
 export default function Header() {
@@ -24,7 +25,7 @@ export default function Header() {
             Menu
           </button>
 
-          <Link href="/" className="relative h-14 aspect-[12/5.5] overflow-hidden">
+          <Link href="/" className="relative h-14 aspect-[12/5.5] overflow-hidden rounded-md bg-[#070708] px-1">
             <Image
               src={asset("/media/brand/logo.png")}
               alt="Think Audio Visual"
@@ -33,12 +34,15 @@ export default function Header() {
             />
           </Link>
 
-          <Link
-            href="/contact"
-            className="rounded-full bg-accent px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-[#06110E] transition-transform hover:-translate-y-0.5"
-          >
-            Get a Quote
-          </Link>
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <Link
+              href="/contact"
+              className="rounded-full bg-accent px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-[var(--accent-contrast)] transition-transform hover:-translate-y-0.5"
+            >
+              Get a Quote
+            </Link>
+          </div>
         </nav>
       </header>
 

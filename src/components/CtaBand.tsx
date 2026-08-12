@@ -35,7 +35,7 @@ export default function CtaBand({
         <div className="mt-7 flex flex-wrap justify-center gap-3.5">
           <Link
             href="/contact"
-            className="rounded-full bg-accent px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-white shadow-[0_10px_30px_-8px_var(--accent-glow)] transition-transform hover:-translate-y-0.5"
+            className="rounded-full bg-accent px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-[var(--accent-contrast)] shadow-[0_10px_30px_-8px_var(--accent-glow)] transition-transform hover:-translate-y-0.5"
           >
             {primaryLabel}
           </Link>

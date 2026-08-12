@@ -11,10 +11,30 @@
   --border: rgba(245, 245, 243, 0.1);
   --accent-glow: rgba(46, 158, 139, 0.35);
   --accent-glow-soft: rgba(46, 158, 139, 0.14);
+  /* Text color for content sitting on top of --accent. The dark-mode teal
+     is bright enough for near-black text; the light-mode/section-light teal
+     is darker and needs white text instead — never hardcode either. */
+  --accent-contrast: #06110E;
   color-scheme: dark;
 }
 
-/* The one deliberate bright beat in an otherwise dark site — not a toggle */
+/* Global light theme, toggled via ThemeToggle (sets html[data-theme]) */
+html[data-theme="light"] {
+  --accent: #1C7263;
+  --bg: #F7F7F5;
+  --surface: #FFFFFF;
+  --text: #101012;
+  --muted: #55555B;
+
+  --surface-glass: rgba(255, 255, 255, 0.78);
+  --border: rgba(16, 16, 18, 0.1);
+  --accent-glow: rgba(28, 114, 99, 0.2);
+  --accent-glow-soft: rgba(28, 114, 99, 0.08);
+  --accent-contrast: #FFFFFF;
+  color-scheme: light;
+}
+
+/* A deliberate bright beat inside an otherwise-dark section, independent of the toggle */
 .section-light {
   --bg: #F7F7F5;
   --surface: #FFFFFF;
@@ -24,6 +44,7 @@
   --border: rgba(16, 16, 18, 0.1);
   --accent-glow: rgba(28, 114, 99, 0.2);
   --accent-glow-soft: rgba(28, 114, 99, 0.08);
+  --accent-contrast: #FFFFFF;
   background: var(--bg);
   color: var(--text);
 }

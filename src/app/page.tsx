@@ -69,19 +69,20 @@ export default function Home() {
       {/* Hero */}
       <section className="relative flex min-h-[92vh] flex-col items-center justify-center overflow-hidden px-6 py-32">
         <HeroVideo />
-        <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
-          <span className="eyebrow justify-center [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">Where Sound Meets Engineering</span>
-          <SplitHeadline className="mx-auto max-w-4xl [text-shadow:0_4px_30px_rgba(0,0,0,0.85)]">We Build Extraordinary Live Experiences.</SplitHeadline>
-          <p className="mx-auto mb-8 max-w-xl text-lg text-text/90 [text-shadow:0_2px_16px_rgba(0,0,0,0.9)]">
+        {/* Hero always sits on video, so its foreground stays light regardless of the site theme toggle */}
+        <div className="relative z-10 mx-auto w-full max-w-6xl text-center text-white">
+          <span className="eyebrow justify-center text-accent [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">Where Sound Meets Engineering</span>
+          <SplitHeadline className="mx-auto max-w-4xl text-white [text-shadow:0_4px_30px_rgba(0,0,0,0.85)]">We Build Extraordinary Live Experiences.</SplitHeadline>
+          <p className="mx-auto mb-8 max-w-xl text-lg text-white/90 [text-shadow:0_2px_16px_rgba(0,0,0,0.9)]">
             Precision-run stage, sound, lighting and AV production — built to hold up under
             pressure, from corporate galas and conferences to concerts and broadcast activations
             across South Africa.
           </p>
           <div className="flex flex-wrap justify-center gap-3.5">
-            <Link href="/contact" className="rounded-full bg-accent px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-[#06110E] transition-transform hover:-translate-y-0.5">
+            <Link href="/contact" className="rounded-full bg-accent px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-[var(--accent-contrast)] transition-transform hover:-translate-y-0.5">
               Get a Quote
             </Link>
-            <Link href="/portfolio" className="rounded-full border border-[var(--border)] px-7 py-3.5 text-xs font-bold uppercase tracking-wide transition-colors hover:border-accent hover:text-accent">
+            <Link href="/portfolio" className="rounded-full border border-white/30 px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-white transition-colors hover:border-accent hover:text-accent">
               View Our Work
             </Link>
           </div>
@@ -143,7 +144,7 @@ export default function Home() {
             Every event is treated as a technical operation, not a favour — with the focus on
             reliability, the right equipment, and results delivered on your timeline.
           </p>
-          <Link href="/contact" className="inline-block rounded-full bg-accent px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-[#06110E]">
+          <Link href="/contact" className="inline-block rounded-full bg-accent px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-[var(--accent-contrast)]">
             Get a Quote
           </Link>
         </Reveal>

@@ -77,7 +77,7 @@ export default function BookingForm() {
       </div>
       <button
         type="submit"
-        className="mt-7 w-full rounded-full bg-accent px-7 py-3.5 text-sm font-bold text-[#06110E] transition-transform hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-6px_var(--accent-glow)] sm:w-auto"
+        className="mt-7 w-full rounded-full bg-accent px-7 py-3.5 text-sm font-bold text-[var(--accent-contrast)] transition-transform hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-6px_var(--accent-glow)] sm:w-auto"
       >
         Send via WhatsApp
       </button>

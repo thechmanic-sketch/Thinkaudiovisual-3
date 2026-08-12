@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="glow -bottom-40 -left-40 h-[420px] w-[420px] opacity-30" />
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="flex flex-col items-center gap-10 text-center">
-          <div className="relative h-16 aspect-[12/5.5] overflow-hidden">
+          <div className="relative h-16 aspect-[12/5.5] overflow-hidden rounded-md bg-[#070708] px-1">
             <Image
               src={asset("/media/brand/logo.png")}
               alt="Think Audio Visual"

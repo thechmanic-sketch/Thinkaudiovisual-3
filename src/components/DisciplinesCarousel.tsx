@@ -80,7 +80,7 @@ export default function DisciplinesCarousel({
       <div className="mt-10 text-center">
         <Link
           href="/services"
-          className="inline-block rounded-full bg-accent px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-white transition-transform hover:-translate-y-0.5"
+          className="inline-block rounded-full bg-accent px-7 py-3.5 text-xs font-bold uppercase tracking-wide text-[var(--accent-contrast)] transition-transform hover:-translate-y-0.5"
         >
           See how we solve every setup
         </Link>

@@ -47,34 +47,35 @@ export default function DisciplinesCarousel({
         </p>
       </Reveal>
 
-      <div
-        className="scrollbar-none -mx-6 flex snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-4"
-        style={{ scrollbarWidth: "none" }}
-      >
-        {items.map((d, i) => (
-          <Reveal
-            key={d.title}
-            delay={i * 0.06}
-            className="w-[280px] shrink-0 snap-start rounded-md border border-[var(--border)] bg-surface p-8 sm:w-[320px]"
-          >
-            <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-[var(--border)] text-accent">
-              {icons[d.title]}
-            </div>
-            <h3>{d.title}</h3>
-            <p>{d.copy}</p>
-            {d.lines && (
-              <ul className="mt-4 space-y-2 border-t border-[var(--border)] pt-4">
-                {d.lines.map((line) => (
-                  <li key={line} className="relative pl-4 text-sm text-muted">
-                    <span className="absolute left-0 top-[0.6em] h-1 w-1 rounded-full bg-accent" />
-                    {line}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </Reveal>
-        ))}
-        <div className="w-px shrink-0" aria-hidden />
+      <div className="mx-auto max-w-6xl">
+        <div
+          className="scrollbar-none flex snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-4"
+          style={{ scrollbarWidth: "none" }}
+        >
+          {items.map((d, i) => (
+            <Reveal
+              key={d.title}
+              delay={i * 0.06}
+              className="w-[280px] shrink-0 snap-start rounded-md border border-[var(--border)] bg-surface p-8 sm:w-[320px]"
+            >
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-[var(--border)] text-accent">
+                {icons[d.title]}
+              </div>
+              <h3>{d.title}</h3>
+              <p>{d.copy}</p>
+              {d.lines && (
+                <ul className="mt-4 space-y-2 border-t border-[var(--border)] pt-4">
+                  {d.lines.map((line) => (
+                    <li key={line} className="relative pl-4 text-sm text-muted">
+                      <span className="absolute left-0 top-[0.6em] h-1 w-1 rounded-full bg-accent" />
+                      {line}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </Reveal>
+          ))}
+        </div>
       </div>
 
       <div className="mt-10 text-center">

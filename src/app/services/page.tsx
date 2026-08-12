@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
+import Parallax from "@/components/Parallax";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Sound, Lighting, Staging & AV Hire Durban | Think Audio Visual Services",
@@ -14,24 +17,28 @@ const services = [
     title: "Sound",
     copy: "Live audio and sound reinforcement for performances, functions and conferences alike.",
     items: ["PA systems", "Live performances", "Backline (bands)", "DJ'ying", "Audio recording", "Conference microphones"],
+    img: "/media/gallery/sound-tile.jpg",
   },
   {
     idx: "02 — Lighting",
     title: "Lighting",
     copy: "Stage and decorative lighting design that sets the tone for every kind of event.",
     items: ["Stage lights", "Up lights", "Décor lights", "Disco lights"],
+    img: "/media/gallery/concert-stage.avif",
   },
   {
     idx: "03 — Stage & Rigging",
     title: "Stage & Rigging",
     copy: "Staging, trussing and podiums built to spec for performances, shows and formal proceedings.",
     items: ["Performance stage", "Fashion show stage", "Trussing & rigging", "Podium raising", "Main table stage"],
+    img: "/media/gallery/stage-monitor.webp",
   },
   {
     idx: "04 — Audio Visual",
     title: "Audio Visual",
     copy: "Screens, projection and LED walls for conferences, meetings and brand activations.",
     items: ["LED screens", "Fastfold & daylight screens", "Data projectors & laptops", "Presentation aids", "Video recording & live streaming"],
+    img: "/media/gallery/gallery-05.jpg",
   },
 ];
 
@@ -45,6 +52,16 @@ export default function Services() {
   return (
     <>
       <section className="relative overflow-hidden px-6 pb-16 pt-36">
+        <Parallax fill strength={14}>
+          <Image
+            src={asset("/media/gallery/gallery-07.jpg")}
+            alt="Think Audio Visual production setup"
+            fill
+            className="object-cover opacity-30"
+            sizes="100vw"
+          />
+        </Parallax>
+        <div className="absolute inset-0 bg-gradient-to-b from-bg/60 via-bg/85 to-bg" />
         <div className="glow left-1/2 top-[-220px] h-[560px] w-[560px] -translate-x-1/2" />
         <div className="relative z-10 mx-auto max-w-3xl">
           <span className="eyebrow">Services</span>
@@ -55,18 +72,26 @@ export default function Services() {
       <section className="px-6 pb-24">
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
           {services.map((s, i) => (
-            <Reveal key={s.title} delay={i * 0.06} className="rounded-2xl border border-[var(--border)] bg-surface p-8 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.5)]">
-              <span className="mb-4 block font-display text-sm text-accent tracking-wide">{s.idx}</span>
-              <h3>{s.title}</h3>
-              <p>{s.copy}</p>
-              <ul className="mt-4 space-y-0">
-                {s.items.map((item) => (
-                  <li key={item} className="relative border-t border-[var(--border)] py-1.5 pl-4.5 text-sm text-muted">
-                    <span className="absolute left-0 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-accent shadow-[0_0_6px_var(--accent-glow)]" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+            <Reveal key={s.title} delay={i * 0.06} className="overflow-hidden rounded-md border border-[var(--border)] bg-surface transition-all hover:-translate-y-1 hover:border-accent">
+              <div className="relative aspect-[16/9] overflow-hidden">
+                <Parallax fill strength={10}>
+                  <Image src={asset(s.img)} alt={s.title} fill className="object-cover" sizes="(min-width: 768px) 45vw, 90vw" />
+                </Parallax>
+                <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/10 to-transparent" />
+              </div>
+              <div className="p-8">
+                <span className="mb-4 block font-mono text-xs uppercase tracking-wide text-accent">{s.idx}</span>
+                <h3>{s.title}</h3>
+                <p>{s.copy}</p>
+                <ul className="mt-4 space-y-0">
+                  {s.items.map((item) => (
+                    <li key={item} className="relative border-t border-[var(--border)] py-1.5 pl-4.5 text-sm text-muted">
+                      <span className="absolute left-0 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-accent shadow-[0_0_6px_var(--accent-glow)]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </Reveal>
           ))}
         </div>

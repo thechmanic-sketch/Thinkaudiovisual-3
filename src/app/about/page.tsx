@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import Card from "@/components/Card";
 import CtaBand from "@/components/CtaBand";
+import Parallax from "@/components/Parallax";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "About Think Audio Visual | Event Production Company Durban",
@@ -26,6 +29,16 @@ export default function About() {
   return (
     <>
       <section className="relative overflow-hidden px-6 pb-16 pt-36">
+        <Parallax fill strength={14}>
+          <Image
+            src={asset("/media/gallery/gallery-04.jpg")}
+            alt="Think Audio Visual crew on site"
+            fill
+            className="object-cover opacity-30"
+            sizes="100vw"
+          />
+        </Parallax>
+        <div className="absolute inset-0 bg-gradient-to-b from-bg/60 via-bg/85 to-bg" />
         <div className="glow left-1/2 top-[-220px] h-[560px] w-[560px] -translate-x-1/2" />
         <div className="relative z-10 mx-auto max-w-3xl">
           <span className="eyebrow">About Us</span>
@@ -60,27 +73,50 @@ export default function About() {
       </section>
 
       <section className="section-light px-6 py-24">
-        <div className="mx-auto max-w-6xl">
-          <Reveal className="mx-auto mb-14 max-w-xl text-center">
-            <span className="eyebrow justify-center">Why Us</span>
+        <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-2 md:items-center">
+          <Reveal className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--border)] md:order-2">
+            <Parallax fill strength={16}>
+              <Image
+                src={asset("/media/gallery/event-onsite-2.jpg")}
+                alt="Think Audio Visual crew running an event"
+                fill
+                className="object-cover"
+                sizes="(min-width: 768px) 45vw, 90vw"
+              />
+            </Parallax>
+          </Reveal>
+          <Reveal className="md:order-1">
+            <span className="eyebrow">Why Us</span>
             <h2>Four reasons we keep getting the call back.</h2>
           </Reveal>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {reasons.map((r, i) => (
-              <Reveal key={r.title} delay={i * 0.08}>
-                <Card title={r.title}>
-                  <p>{r.copy}</p>
-                </Card>
-              </Reveal>
-            ))}
-          </div>
+        </div>
+
+        <div className="mx-auto mt-14 grid max-w-6xl gap-6 border-t border-[var(--border)] pt-14 sm:grid-cols-2 lg:grid-cols-4">
+          {reasons.map((r, i) => (
+            <Reveal key={r.title} delay={i * 0.08}>
+              <h3>{r.title}</h3>
+              <p>{r.copy}</p>
+            </Reveal>
+          ))}
         </div>
       </section>
 
-      <Reveal className="px-6 pb-24 text-center">
-        <span className="eyebrow justify-center">Reach</span>
-        <h2>Based in Durban. Working across Southern Africa.</h2>
-      </Reveal>
+      <section className="relative overflow-hidden px-6 py-32 text-center">
+        <Parallax fill strength={14}>
+          <Image
+            src={asset("/media/gallery/dj-setup.jpg")}
+            alt="Think Audio Visual event"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+        </Parallax>
+        <div className="absolute inset-0 bg-bg/85" />
+        <Reveal className="relative z-10 mx-auto max-w-2xl">
+          <span className="eyebrow justify-center">Reach</span>
+          <h2>Based in Durban. Working across Southern Africa.</h2>
+        </Reveal>
+      </section>
 
       <CtaBand
         heading="Tell us what you're planning."

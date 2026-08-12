@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import MediaGrid from "@/components/MediaGrid";
 import CtaBand from "@/components/CtaBand";
+import Parallax from "@/components/Parallax";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Event Photo Gallery | Think Audio Visual Stage & Sound Setups",
@@ -25,6 +28,16 @@ export default function Gallery() {
   return (
     <>
       <section className="relative overflow-hidden px-6 pb-16 pt-36">
+        <Parallax fill strength={14}>
+          <Image
+            src={asset("/media/gallery/gallery-13.jpg")}
+            alt="Think Audio Visual event"
+            fill
+            className="object-cover opacity-25"
+            sizes="100vw"
+          />
+        </Parallax>
+        <div className="absolute inset-0 bg-gradient-to-b from-bg/60 via-bg/85 to-bg" />
         <div className="glow left-1/2 top-[-220px] h-[560px] w-[560px] -translate-x-1/2" />
         <div className="relative z-10 mx-auto max-w-3xl">
           <span className="eyebrow">Gallery</span>

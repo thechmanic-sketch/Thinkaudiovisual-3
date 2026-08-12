@@ -24,14 +24,8 @@ export default function Header() {
             Menu
           </button>
 
-          <Link href="/" className="flex items-center gap-2.5 font-display font-bold">
-            <Image src={asset("/media/brand/logo.png")} alt="Think Audio Visual" width={32} height={32} className="h-8 w-8 rounded-full object-contain" />
-            <span className="hidden leading-tight sm:block">
-              <span className="font-display text-base font-bold uppercase tracking-wide">THINK AUDIO VISUAL</span>
-              <small className="block font-mono text-[0.6rem] font-medium tracking-widest text-muted">
-                Durban · South Africa
-              </small>
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image src={asset("/media/brand/logo.png")} alt="Think Audio Visual" width={56} height={56} className="h-14 w-14 rounded-full object-contain" />
           </Link>
 
           <Link
